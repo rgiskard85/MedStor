@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="41d2b93f-f1ac-472a-807e-41bbbd29a237" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49329/MedMgmt.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MedMgmt.disco" MetadataType="Disco" ID="2d4bc897-9566-494c-b535-9b303bae954c" SourceId="1" SourceUrl="http://localhost:49329/MedMgmt.svc?disco" />
+    <MetadataFile FileName="MedMgmt.xsd" MetadataType="Schema" ID="97619cbb-15d1-4667-b9a1-5634039aa4e3" SourceId="1" SourceUrl="http://localhost:49329/MedMgmt.svc?xsd=xsd0" />
+    <MetadataFile FileName="MedMgmt1.xsd" MetadataType="Schema" ID="a6ad8222-785a-49f0-b0fd-593ee8120a98" SourceId="1" SourceUrl="http://localhost:49329/MedMgmt.svc?xsd=xsd1" />
+    <MetadataFile FileName="MedMgmt2.xsd" MetadataType="Schema" ID="8a271b88-20b5-4dd7-8c2b-00979f96e2c4" SourceId="1" SourceUrl="http://localhost:49329/MedMgmt.svc?xsd=xsd2" />
+    <MetadataFile FileName="MedMgmt.wsdl" MetadataType="Wsdl" ID="27e1ae86-adb5-474e-ab9f-70466cf14a44" SourceId="1" SourceUrl="http://localhost:49329/MedMgmt.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

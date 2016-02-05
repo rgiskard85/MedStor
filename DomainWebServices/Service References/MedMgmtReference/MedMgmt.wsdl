@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MedMgmt" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49329/MedMgmt.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49329/MedMgmt.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49329/MedMgmt.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UtilityWebServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMedMgmt_InsertMedicine_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMedicine" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_InsertMedicine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMedicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_UpdateMedicine_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMedicine" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_UpdateMedicine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMedicineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_SetMedicineQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMedicineQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_SetMedicineQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMedicineQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_GetMedicineQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicineQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_GetMedicineQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicineQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_GetMedicineList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicineList" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_GetMedicineList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicineListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_MedicineExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:MedicineExists" />
+  </wsdl:message>
+  <wsdl:message name="IMedMgmt_MedicineExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MedicineExistsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMedMgmt">
+    <wsdl:operation name="InsertMedicine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedMgmt/InsertMedicine" message="tns:IMedMgmt_InsertMedicine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedMgmt/InsertMedicineResponse" message="tns:IMedMgmt_InsertMedicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMedicine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedMgmt/UpdateMedicine" message="tns:IMedMgmt_UpdateMedicine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedMgmt/UpdateMedicineResponse" message="tns:IMedMgmt_UpdateMedicine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMedicineQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedMgmt/SetMedicineQuantity" message="tns:IMedMgmt_SetMedicineQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedMgmt/SetMedicineQuantityResponse" message="tns:IMedMgmt_SetMedicineQuantity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicineQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedMgmt/GetMedicineQuantity" message="tns:IMedMgmt_GetMedicineQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedMgmt/GetMedicineQuantityResponse" message="tns:IMedMgmt_GetMedicineQuantity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicineList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedMgmt/GetMedicineList" message="tns:IMedMgmt_GetMedicineList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedMgmt/GetMedicineListResponse" message="tns:IMedMgmt_GetMedicineList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MedicineExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMedMgmt/MedicineExists" message="tns:IMedMgmt_MedicineExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMedMgmt/MedicineExistsResponse" message="tns:IMedMgmt_MedicineExists_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMedMgmt" type="tns:IMedMgmt">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertMedicine">
+      <soap:operation soapAction="http://tempuri.org/IMedMgmt/InsertMedicine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMedicine">
+      <soap:operation soapAction="http://tempuri.org/IMedMgmt/UpdateMedicine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMedicineQuantity">
+      <soap:operation soapAction="http://tempuri.org/IMedMgmt/SetMedicineQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicineQuantity">
+      <soap:operation soapAction="http://tempuri.org/IMedMgmt/GetMedicineQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicineList">
+      <soap:operation soapAction="http://tempuri.org/IMedMgmt/GetMedicineList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MedicineExists">
+      <soap:operation soapAction="http://tempuri.org/IMedMgmt/MedicineExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MedMgmt">
+    <wsdl:port name="BasicHttpBinding_IMedMgmt" binding="tns:BasicHttpBinding_IMedMgmt">
+      <soap:address location="http://localhost:49329/MedMgmt.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

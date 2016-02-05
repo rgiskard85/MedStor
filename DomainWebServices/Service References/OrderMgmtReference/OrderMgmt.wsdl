@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OrderMgmt" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49329/OrderMgmt.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49329/OrderMgmt.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49329/OrderMgmt.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:49329/OrderMgmt.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/UtilityWebServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOrderMgmt_InsertOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_InsertOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_InsertOrdMed_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrdMed" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_InsertOrdMed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrdMedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_CompleteOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_CompleteOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_GetOrdMed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdMed" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_GetOrdMed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdMedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_DeleteOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_DeleteOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_DeleteOrderUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrderUser" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_DeleteOrderUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrderUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_GetOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderList" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_GetOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_GetUserOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserOrderList" />
+  </wsdl:message>
+  <wsdl:message name="IOrderMgmt_GetUserOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserOrderListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOrderMgmt">
+    <wsdl:operation name="InsertOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderMgmt/InsertOrder" message="tns:IOrderMgmt_InsertOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderMgmt/InsertOrderResponse" message="tns:IOrderMgmt_InsertOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrdMed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderMgmt/InsertOrdMed" message="tns:IOrderMgmt_InsertOrdMed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderMgmt/InsertOrdMedResponse" message="tns:IOrderMgmt_InsertOrdMed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderMgmt/CompleteOrder" message="tns:IOrderMgmt_CompleteOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderMgmt/CompleteOrderResponse" message="tns:IOrderMgmt_CompleteOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdMed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderMgmt/GetOrdMed" message="tns:IOrderMgmt_GetOrdMed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderMgmt/GetOrdMedResponse" message="tns:IOrderMgmt_GetOrdMed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderMgmt/DeleteOrder" message="tns:IOrderMgmt_DeleteOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderMgmt/DeleteOrderResponse" message="tns:IOrderMgmt_DeleteOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrderUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderMgmt/DeleteOrderUser" message="tns:IOrderMgmt_DeleteOrderUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderMgmt/DeleteOrderUserResponse" message="tns:IOrderMgmt_DeleteOrderUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderMgmt/GetOrderList" message="tns:IOrderMgmt_GetOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderMgmt/GetOrderListResponse" message="tns:IOrderMgmt_GetOrderList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrderMgmt/GetUserOrderList" message="tns:IOrderMgmt_GetUserOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrderMgmt/GetUserOrderListResponse" message="tns:IOrderMgmt_GetUserOrderList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOrderMgmt" type="tns:IOrderMgmt">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertOrder">
+      <soap:operation soapAction="http://tempuri.org/IOrderMgmt/InsertOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrdMed">
+      <soap:operation soapAction="http://tempuri.org/IOrderMgmt/InsertOrdMed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteOrder">
+      <soap:operation soapAction="http://tempuri.org/IOrderMgmt/CompleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdMed">
+      <soap:operation soapAction="http://tempuri.org/IOrderMgmt/GetOrdMed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <soap:operation soapAction="http://tempuri.org/IOrderMgmt/DeleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrderUser">
+      <soap:operation soapAction="http://tempuri.org/IOrderMgmt/DeleteOrderUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderList">
+      <soap:operation soapAction="http://tempuri.org/IOrderMgmt/GetOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserOrderList">
+      <soap:operation soapAction="http://tempuri.org/IOrderMgmt/GetUserOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderMgmt">
+    <wsdl:port name="BasicHttpBinding_IOrderMgmt" binding="tns:BasicHttpBinding_IOrderMgmt">
+      <soap:address location="http://localhost:49329/OrderMgmt.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

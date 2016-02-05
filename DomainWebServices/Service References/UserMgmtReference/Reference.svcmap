@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6ae66ac5-11f1-4a7c-a873-88bb725c2593" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49329/UserMgmt.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserMgmt3.xsd" MetadataType="Schema" ID="adca2da1-26e8-415b-946b-d0c271952498" SourceId="1" SourceUrl="http://localhost:49329/UserMgmt.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserMgmt2.xsd" MetadataType="Schema" ID="4cc2f606-429d-4f60-94d6-f1b7e2c4f694" SourceId="1" SourceUrl="http://localhost:49329/UserMgmt.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserMgmt.disco" MetadataType="Disco" ID="30c12424-d0d2-4a12-ae9f-e91159d0c389" SourceId="1" SourceUrl="http://localhost:49329/UserMgmt.svc?disco" />
+    <MetadataFile FileName="UserMgmt.wsdl" MetadataType="Wsdl" ID="1c78b578-9b40-4e52-8dd0-e74a82a1fd5b" SourceId="1" SourceUrl="http://localhost:49329/UserMgmt.svc?wsdl" />
+    <MetadataFile FileName="UserMgmt1.xsd" MetadataType="Schema" ID="bb9a6ca4-d1ae-46f2-a43f-76f711415bc4" SourceId="1" SourceUrl="http://localhost:49329/UserMgmt.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
