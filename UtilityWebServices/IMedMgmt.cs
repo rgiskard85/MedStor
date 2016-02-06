@@ -20,6 +20,7 @@ namespace UtilityWebServices
         [DataMember]
         public decimal price { get; set; }
     }
+
     [ServiceContract]
     public interface IMedMgmt
     {

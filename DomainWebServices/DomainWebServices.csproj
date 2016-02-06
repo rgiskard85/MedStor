@@ -116,6 +116,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Stock.svc" />
     <Content Include="User.svc" />
     <Content Include="Web.config" />
     <None Include="Service References\UserMgmtReference\UserMgmt2.xsd">
@@ -127,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IOrders.cs" />
+    <Compile Include="IStock.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="Orders.svc.cs">
       <DependentUpon>Orders.svc</DependentUpon>
@@ -146,6 +148,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.svc.cs">
+      <DependentUpon>Stock.svc</DependentUpon>
     </Compile>
     <Compile Include="User.svc.cs">
       <DependentUpon>User.svc</DependentUpon>
